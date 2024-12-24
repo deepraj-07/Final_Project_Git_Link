@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Donation</title>
+    <style>body,
+        html {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+        }
+        
+        /* Navigation Bar Styles */
+        nav {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          z-index: 10;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+          transition :opacity 0.3s ease, visibility 0.3s ease;/* Initially visible */
+          opacity: 1;
+          visibility: visible;
+        }
+        
+        nav.hidden {
+          opacity: 0;
+          visibility: hidden;
+        }
+        
+        .navbar {
+          list-style: none;
+          margin: 0;
+          padding: 10px 20px;
+          display: flex;
+          justify-content: flex-end;
+        }
+        
+        .navbar li {
+          margin: 0 15px;
+        
+        }
+        
+        
+        .navbar a {
+          text-decoration: none;
+          color: white;
+          font-size: 16px;
+          transition: color 0.3s ease;
+          border-radius: 10px;
+        }
+        
+        .navbar a:hover {
+          color: black;
+          background-color: blue;
+        
+        }
+        
+        
+        
+        /* Navigation Bar Styles */
+        /* Parallax Sections */
+        .parallax {
+          height: 100vh;
+          width: 100%;
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          scroll-snap-align: start;
+        }
+        
+        .parallax:nth-child(1) {
+          background-image: url('Gallery/WhatsApp Image 2024-12-12 at 10.46.03_4d3557d8.jpg');
+        }
+        
+        .parallax:nth-child(2) {
+          background-image: url('Gallery/WhatsApp Image 2024-12-12 at 10.46.03_4d3557d8.jpg');
+        }
+        
+        .parallax:nth-child(3) {
+          background-image: url('Gallery/WhatsApp Image 2024-12-12 at 10.45.46_65d19696.jpg');
+        }
+        
+        .parallax:nth-child(4) {
+          background-image: url('Gallery/WhatsApp Image 2024-12-12 at 10.46.16_5f6cb31b.jpg');
+        }
+        
+        .parallax:nth-child(5) {
+          background-image: url('Gallery/WhatsApp Image 2024-12-12 at 10.45.45_75e0a52e.jpg');
+        
+        }
+        
+        .parallax:nth-child(6) {
+          background-image: url('Gallery/WhatsApp Image 2024-12-12 at 10.24.43_ce8bc543.jpg');
+        
+        }
+        
+        .parallax {
+          background-image: url('Gallery/your-background-image.jpg');
+          /* Replace with your image */
+          min-height: 500px;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: white;
+          text-align: center;
+          padding: 20px;
+        }
+        
+        .D {
+          padding: 20px;
+        }
+        
+        .login-bar {
+          margin: 20px auto;
+          padding: 30px;
+          background: linear-gradient(145deg, #ffffff, #e6e6e6);
+          color: #000;
+          border-radius: 12px;
+          max-width: 350px;
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.5);
+        }
+        
+        .login-bar form {
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .login-bar label {
+          margin-bottom: 24px;
+          font-weight: bold;
+          font-size: 18px;
+          color: #333;
+        }
+        
+        .login-bar input {
+          margin-bottom: 20px;
+          padding: 12px;
+          border: none;
+          border-radius: 6px;
+          box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+          font-size: 14px;
+          outline: none;
+          background: #f9f9f9;
+        }
+        
+        .login-bar input:focus {
+          background: #fff;
+          box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.9);
+        }
+        
+        .login-bar button {
+          padding: 12px;
+          background: linear-gradient(145deg, #007bff, #0056b3);
+          color: white;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .login-bar button:hover {
+          background: linear-gradient(145deg, #0056b3, #003a80);
+          box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        
+        .A {
+          color: blue;
+        
+        }
+        
+        .highlight {
+          color: beige;
+          /* Choose your desired color */
+          font-weight: lighter;
+          /* Optional for emphasis */
+        }
+        
+        .content h1 {
+          font-size: clamp(2rem, 5vw, 6rem);
+        }</style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="mainNav">
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#donate">Donate</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#Login">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="parallax" id="home">
+        <div class="content">
+           
+        </div>
+    </div>
+    <div class="parallax" id="about">
+        <div class="A">
+            
+        </div>
+    </div>
+
+
+    <div class="parallax" id="donate">
+        <div class="B">
+            
+        </div>
+    </div>
+
+    <div class="parallax" id="contact">
+        <div class="C">
+            
+        </div>
+    </div>
+
+    <div class="parallax" id="Login">
+        <div class="D">
+            
+    
+            <!-- Login Bar -->
+            <div class="login-bar">
+                <form action="/submit-login" method="POST">
+                    
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <style>body {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-image: url('Gallery/lelo.avif');
+        background-size: cover;
+      }
+      
+      h1 {
+        width: 100%;
+        height: 100vh;
+        line-height: 80vh;
+        text-align: center;
+        display: block;
+        font-size: 60px;
+      }
+      h1:hover {
+        color: blue; /* Change text color on hover */
+        transform: scale(1.1); /* Slightly enlarge the text */
+        text-shadow: 0 5px 15px yellow /* Add a glowing effect */
+      }
+      
+      .view {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      
+      .block {
+        height: 200px;
+        width: 300px;
+        margin: 50px;
+        border: 0.5mm solid black;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          border-radius: 20px;
+      }
+      
+      .block:nth-child(1) {
+        background-image: url('Gallery/WhatsApp Image 2024-12-13 at 16.17.35_026f7526.jpg');
+        background-repeat: no-repeat; 
+        background-position: center; 
+        background-size: contain;
+      }
+      .block:nth-child(2) {
+        background-image: url('Gallery/WhatsApp Image 2024-12-13 at 16.18.43_ff9daebe.jpg');
+        background-repeat: no-repeat; 
+        background-position: center; 
+        background-size: contain;
+      }
+      .block:nth-child(3) {
+        background-image: url('Gallery/WhatsApp Image 2024-12-13 at 16.17.58_dd4ffb8f.jpg');
+        background-repeat: no-repeat; 
+        background-position: center; 
+        background-size: contain;
+      }
+      .block:nth-child(4) {
+        background-image: url('Gallery/WhatsApp Image 2024-12-13 at 16.17.58_851115a5.jpg');
+        background-repeat: no-repeat; 
+        background-position: center; 
+        background-size: contain;
+        width:700px;
+      }
+      .block:nth-child(5) {
+        background-image: url('Gallery/WhatsApp Image 2024-12-13 at 16.17.36_d5b7fdb2.jpg');
+        background-repeat: no-repeat; 
+        background-position: center; 
+        background-size: contain;
+      }
+      .block:nth-child(6) {
+        background-image: url('Gallery/WhatsApp Image 2024-12-13 at 16.17.36_aa6506c6.jpg');
+        background-repeat: no-repeat; 
+        background-position: center; 
+        background-size: contain;
+      }
+      .block:nth-child(7) {
+        background-image: url('Gallery/WhatsApp Image 2024-12-13 at 16.17.36_4159c922.jpg');
+        background-repeat: no-repeat; 
+        background-position: center; 
+        background-size: contain;
+      }
+     
+      
+      @keyframes appear {
+        from {
+          opacity: 0;
+          clip-path: inset(100% 100% 0 0);
+        }
+        to {
+          opacity: 1;
+          clip-path: inset(0 0 0 0);
+        }
+      }
+      
+      .block {
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+      }</style>
+  </head>
+  <body>
+    <h1>Contribute</h1>
+    <div class="view">
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+   
+    </div>
+  </body>
+</html>
